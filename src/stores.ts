@@ -1,8 +1,10 @@
 import { writable } from "svelte/store";
 
-export const info = writable({
-    img: "",
-    title: "",
-    techs: [],
-    overview: "",
-});
+export interface info {
+    title: string;
+    img: string;
+    techs: string[];
+    preview?: string;
+    overview: string;
+    challenges?: string;
+}

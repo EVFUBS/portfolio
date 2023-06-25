@@ -166,7 +166,6 @@ const scrollToPage= (el) => {
 
 <script>
 	import Main from "./Main.svelte";
-	import ProjectInfo from "./lib/pages/ProjectInfo.svelte";
 	import { Router, Route } from "svelte-navigator";
 
 </script>
@@ -175,9 +174,6 @@ const scrollToPage= (el) => {
 	<Router>
 		<Route path="/">
 			<Main/>
-		</Route>
-		<Route path="/details/:projectname">
-			<ProjectInfo/>
 		</Route>
 	</Router>
 </main>

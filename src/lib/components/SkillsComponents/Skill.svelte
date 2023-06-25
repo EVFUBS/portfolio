@@ -29,7 +29,7 @@
 
     .body{
         background-color: #222831;
-        width: 300px;
+        width: 500px;
         color: white;
         padding: 1rem;
         border-radius: 0.5rem;

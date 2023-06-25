@@ -5,7 +5,7 @@
 
 <div class="body" style="--height: {height}">
     <div class="intro">
-        <p>Hi, I'm <span class="name">Luke Smith</span>, a software developer and student</p>
+        <p>Hi, I'm <span class="name">Luke Smith</span>, a software developer and graduate with a BSc in Computer Science</p>
     </div>
 </div>
 

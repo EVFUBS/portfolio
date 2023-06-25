@@ -1,6 +1,8 @@
 <script lang="ts">
     import { navigate } from "svelte-navigator";
     import { info } from "../../../stores";
+    import InfoPopup from "./InfoPopup.svelte";
+    import { bind } from "svelte/internal";
 
     interface info {
         img: string;
@@ -9,28 +11,28 @@
         overview: string;
     }
 
-    export let img
-    export let title:string
-    export let description:string
-    export let bgColour:string
-    export let github:string
-    export let project:string
-    export let projectInfo: info
+    export let img;
+    export let title:string;
+    export let description:string;
+    export let bgColour:string;
+    export let github:string;
+    export let project:string;
+    export let projectInfo: info;
     
-    let hover
+    let hover;
+    let dialog;
+    let dialogToggle;
 
     const showInfo = () => {
         hover.style.display = "flex"
     }
     const hideInfo = () => {
+        if (dialog.open) {
+            return
+        }
+
         hover.style.display = "none"
     }
-
-    const setInfo = () => {
-        $info = projectInfo
-        navigate(`/details/${projectInfo.title}`)
-    }
-
 
 </script>
 
@@ -45,7 +47,9 @@
             <div class="link">
                 <a href={project} target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24"><path d="M21.172 11.486l-5.172-5.072 1.414-1.414 6.586 6.485-6.586 6.515-1.414-1.414 5.172-5.1zm-18.344 0l5.172-5.072-1.414-1.414-6.586 6.485 6.586 6.515 1.414-1.414-5.172-5.1zm4.672-1.486c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm9 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-4.5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg></a>
             </div>
-            <button on:click={() => setInfo()}>learn more</button>
+
+            <InfoPopup bind:dialog={dialog} bind:toggleDialog={dialogToggle} bind:info={projectInfo}/>
+            <button on:click={() => dialogToggle()}>More Info</button>
         </div>
     </div>
 </div>

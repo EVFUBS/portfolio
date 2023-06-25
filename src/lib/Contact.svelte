@@ -1,6 +1,27 @@
 <script lang="ts">
     export let height: string;
+    let email = "";
+    let name = "";
+    let subject = "";
+    let message = "";
 
+    const createEmail = () => {
+
+        console.log(subject);
+        console.log(message);
+
+        /* create mailto email */
+        email = `mailto:lukesmith1402@gmail.com?subject=${subject}&body=${message}`;
+
+        console.log(email);
+
+        /* open email client */
+        window.open(email);
+
+        /* reset form */
+        subject = "";
+        message = "";
+    } 
 </script>
 
 <div class="body" style="--height: {height}">
@@ -8,14 +29,10 @@
         <h1>Contact <span>Me</span></h1>
         <p>Feel free to contact me using the form regarding any enquires or opportunities</p>
     </div>
-    <form>
-        <div>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-        </div>
-        <input type="text" placeholder="subject">
-        <textarea placeholder="Message"></textarea>
-        <button>Send</button>
+    <form on:submit|preventDefault={createEmail}>
+        <input type="text" placeholder="subject" bind:value={subject}>
+        <textarea placeholder="Message" bind:value={message}></textarea>
+        <button>Generate Email</button>
     </form>
 </div>
 

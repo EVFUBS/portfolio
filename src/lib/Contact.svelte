@@ -27,7 +27,8 @@
 <div class="body" style="--height: {height}">
     <div class="contact">
         <h1>Contact <span>Me</span></h1>
-        <p>Feel free to contact me using the form regarding any enquires or opportunities</p>
+        <p>Feel free to contact me using the mailto link below regarding any enquires or opportunities</p>
+        <p>you can also contact me using lukesmith1402@gmail.com</p>
     </div>
     <form on:submit|preventDefault={createEmail}>
         <input type="text" placeholder="subject" bind:value={subject}>

@@ -1,9 +1,11 @@
 <script lang="ts">
     import type { info } from "src/stores";
     import Card from "./components/ProjectComponents/Card.svelte";
-    import tempimg from "../assets/firewatchTemp.jpg";
     import wordle from "../assets/wordle.jpg";
     import Blitz from "../assets/Blitz.png";
+    import AlphaLang from "../assets/AlphaLang.png";
+    import LyricGen from "../assets/LyricGen.png";
+
     export let height: string;
 
     const wordleInfo: info = {
@@ -26,7 +28,7 @@
 
     const cowritingInfo: info = {
         title: "Lyric Generator",
-        img: tempimg,
+        img: LyricGen,
         techs: ["Python", "Tensorflow", "Svelte", "Django"],
         preview: "song lyric generator using tensorflow, python, svelte, django.",
         overview: `In this project a custom small scale AI language model was created to generate the next few words in a song. 
@@ -38,7 +40,7 @@
 
     const alphaInfo: info = {
         title: "Alpha Lang",
-        img: tempimg,
+        img: AlphaLang,
         techs: ["Go"],
         preview: "Interpreter written in go for a custom language",
         overview: `Alpha Lang is a custom language that was created to learn about how interpreters work. In the course of this project I learnt about how
@@ -53,10 +55,10 @@
 
 <div class="body" style="--height: {height}">
     <div class="cards">
-        <Card img={wordle} title={wordleInfo.title} description={wordleInfo.preview} bgColour="#393E46" github="" project="" projectInfo={wordleInfo}/>
-        <Card img={Blitz} title={blitzInfo.title} description={blitzInfo.preview} bgColour="#393E46" github="" project="" projectInfo={blitzInfo}/>
-        <Card img={tempimg} title={cowritingInfo.title} description={cowritingInfo.preview} bgColour="#393E46" github="" project="" projectInfo={cowritingInfo}/>
-        <Card img={tempimg} title={alphaInfo.title} description={alphaInfo.preview} bgColour="#393E46" github="" project="" projectInfo={alphaInfo}/>
+        <Card img={wordleInfo.img} title={wordleInfo.title} description={wordleInfo.preview} bgColour="#393E46" github="" project="" projectInfo={wordleInfo}/>
+        <Card img={blitzInfo.img} title={blitzInfo.title} description={blitzInfo.preview} bgColour="#393E46" github="" project="" projectInfo={blitzInfo}/>
+        <Card img={cowritingInfo.img} title={cowritingInfo.title} description={cowritingInfo.preview} bgColour="#393E46" github="" project="" projectInfo={cowritingInfo}/>
+        <Card img={alphaInfo.img} title={alphaInfo.title} description={alphaInfo.preview} bgColour="#393E46" github="" project="" projectInfo={alphaInfo}/>
     </div>
 </div>
 

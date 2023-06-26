@@ -8,23 +8,25 @@ import Skills from "./components/SkillsComponents/Skill.svelte";
 
 <div class="body" style="--height: {height}">
     <div class="skills-wrapper">
-<!--     <Skill heading="Front-End Dev" desc="UI/UX is one of the most important aspects of a website to me as a good user experience is integral to a successful product" subHeading="Languages I use:" items={["Javascript", "Typescript", "HTML", "CSS"]} frameHeading="Frameworks I use:" frames={["React.js", "Svelte"]}/>
-        <Skill heading="Back-End Dev" desc="Back-End development is full of complex and unique challenges that allow my to exercise my problem solving" subHeading="Languages I use:" items={["Python", "Java", "SQL"]} frameHeading="Frameworks I use:" frames={["Node.js", "Express", "Django"]}/>
-        <Skill heading="Tools" desc="I use a variety of tools to help me develop my skills and knowledge" subHeading="Tools I use:" items={["Git", "GitHub", "Visual Studio Code", "Firebase tools"]} frameHeading="Databases I use:" frames={["MySQL", "Postgres"]}/> -->
         <div class="skills panel">
             <div class="skills-content">
                 <h3>Skills</h3>
                 <div class="skill">
                     <h4>Front-End Dev</h4>
-                    <p>UI/UX is one of the most important aspects of a website to me as a good user experience is integral to a successful product</p>
+                    <p>I have experience in designing front-end applications in both my personal projects and during my education. 
+                        I try to follow a mobile first approach to my design and development to ensure that my applications are accessible to all users
+                        and try to be consious of accessibilty and usability when designing my applications.
+                    </p>
                 </div>
                 <div class="skill">
                     <h4>Back-End Dev</h4>
-                    <p>Back-End development is full of complex and unique challenges that allow my to exercise my problem solving</p>
+                    <p>I also have some experience in creating backend services such as APIs and websocket servers and for my personal projects.
+                        This lead me to learn frameworks like django and system languages such as Go.</p>
                 </div>
                 <div class="skill">
                     <h4>Databases</h4>
-                    <p>I use a variety of tools to help me develop my skills and knowledge</p>
+                    <p>I have used both SQL and NoSQL based database in my studies as well as my own projects leading me to have
+                        a decent understanding of how to use and interact with a database.</p>
                 </div>
             </div>
         </div>
@@ -37,11 +39,11 @@ import Skills from "./components/SkillsComponents/Skill.svelte";
                     <ul>
                         <li>Javascript</li>
                         <li>Typescript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
                         <li>Python</li>
                         <li>Java</li>
+                        <li>Go</li>
                         <li>SQL</li>
+                        <li>Cypher</li>
                     </ul>
                     <p>As well as languages I am capable in a few frameworks as well those being</p>
                     <ul>
@@ -66,6 +68,14 @@ import Skills from "./components/SkillsComponents/Skill.svelte";
                         <li>GitHub</li>
                         <li>Visual Studio Code</li>
                         <li>Vite</li>
+                    </ul>
+
+                    <p>I also have limited experience but I am interested in areas such as:</p>
+                    <ul>
+                        <li>Mobile development</li>
+                        <li>Systems/embedding programming</li>
+                        <li>Robotics</li>
+                        <li>Machine learning</li>
                     </ul>
                 </div>
             </div>
